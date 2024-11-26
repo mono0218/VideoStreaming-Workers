@@ -1,0 +1,11 @@
+name = "video-streaming-worker"
+main = "index.js"
+
+compatibility_date = "2024-11-26"
+send_metrics = true
+[[r2_buckets]]
+binding = "VIDEO_BUCKET" # Workerで使用する名前
+bucket_name = "media" # R2のバケット名
+# wrangler.toml (wrangler v3.88.0^)
+[observability.logs]
+enabled = true
